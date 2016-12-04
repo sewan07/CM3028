@@ -1,10 +1,14 @@
 
+<?include("../includes/layouts/header.php"); ?>
+
+
+
 <div id="main">
     <div id="navigation">
         &nbsp;
     </div>
     <div id="page">
-        <h2>Admin Menu</h2>
+        <h2>Manage Content</h2>
         <p>Welcome to the Site Administration area.</p>
         <ul>
             <li><a href="manage_content.php">Manage Website Content</a></li>
@@ -13,5 +17,7 @@
         </ul>
     </div>
 </div>
+
+<?include("../includes/layouts/footer.php"); ?>
 
 
