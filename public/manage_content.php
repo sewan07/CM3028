@@ -1,53 +1,43 @@
 <?php require_once("../includes/db_connection.php"); ?>
 
-<?php include("../includes/layouts/header.php"); ?>
+<?php
+// 2. Perform database query
+$query  = "SELECT * ";
+$query .= "FROM subjects ";
+$query .= "WHERE visible = 1 ";
+$query .= "ORDER BY position ASC";
+$result = mysqli_query($connection, $query);
+// Test if there was a query error
+if (!$result) {
+    die("Database query failed.");
+}
+?>
 
-    <div id="main">
-        <div id="navigation">
-            <ul class="subjects">
-                <?php
-                $query  = "SELECT * ";
-                $query .= "FROM subjects ";
-                $query .= "WHERE visible = 1 ";
-                $query .= "ORDER BY position ASC";
-                $subject_set = mysqli_query($connection, $query);
-                confirm_query($subject_set);
-                ?>
-                <?php
-                while($subject = mysqli_fetch_assoc($subject_set)) {
-                    ?>
-                    <li>
-                        <?php echo $subject["menu_name"]; ?>
-                        <?php
-                        $query  = "SELECT * ";
-                        $query .= "FROM pages ";
-                        $query .= "WHERE visible = 1 ";
-                        $query .= "AND subject_id = {$subject["id"]} ";
-                        $query .= "ORDER BY position ASC";
-                        $page_set = mysqli_query($connection, $query);
-                        confirm_query($page_set);
-                        ?>
-                        <ul class="pages">
-                            <?php
-                            while($page = mysqli_fetch_assoc($page_set)) {
-                                ?>
-                                <li><?php echo $page["menu_name"]; ?></li>
-                                <?php
-                            }
-                            ?>
-                            <?php mysqli_free_result($page_set); ?>
-                        </ul>
-                    </li>
-                    <?php
-                }
-                ?>
-                <?php mysqli_free_result($subject_set); ?>
-            </ul>
-        </div>
-        <div id="page">
-            <h2>Manage Content</h2>
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
 
-        </div>
-    </div>
+    <html lang="en">
+    <head>
+        <title>Databases</title>
+    </head>
+    <body>
 
-<?php include("../includes/layouts/footer.php"); ?>
+    <?php
+    // 3. Use returned data (if any)
+    while($row = mysqli_fetch_row($result)) {
+        // output data from each row
+        var_dump($row);
+        echo "<hr />";
+    }
+    ?>
+    <?php
+    // 4. Release returned data
+    mysqli_free_result($result);
+    ?>
+    </body>
+    </html>
+
+<?php
+// 5. Close database connection
+mysqli_close($connection);
+?>
