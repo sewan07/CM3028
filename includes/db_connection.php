@@ -1,16 +1,16 @@
 <?php
-// 1. Create a database connection
-$dbhost = "us-cdbr-azure-southcentral-f.cloudapp.net";
-$dbuser = "b762b602ac9c7b";
-$dbpass = "360b7be5";
-$dbname = "cm3028rgu";
-$connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+	define("DB_SERVER", "localhost");
+	define("DB_USER", "widget_cms");
+	define("DB_PASS", "secretpassword");
+	define("DB_NAME", "widget_corp");
 
-// Test if connection succeeded
-if(mysqli_connect_errno()) {
-    die("Database connection failed: " .
-        mysqli_connect_error() .
-        " (" . mysqli_connect_errno() . ")"
+  // 1. Create a database connection
+  $connection = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
+  // Test if connection succeeded
+  if(mysqli_connect_errno()) {
+    die("Database connection failed: " . 
+         mysqli_connect_error() . 
+         " (" . mysqli_connect_errno() . ")"
     );
-}
+  }
 ?>
