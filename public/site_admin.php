@@ -1,4 +1,6 @@
-<?include("../includes/layouts/header.php"); ?>
+
+<?php require_once("../includes/functions.php"); ?>
+<?php include("../includes/layouts/header.php"); ?>
 
 <div id="main">
     <div id="navigation">
