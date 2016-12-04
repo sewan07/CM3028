@@ -3,8 +3,8 @@
 
 <html lang="en">
 <head>
-    <title> Portlethen </title>
-    <link href="stylesheets/public.css" media="all" rel="stylesheet" type="text/css" />
+    <title>untitled</title>
+    <link href="css/public.css" media="all" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="header">
