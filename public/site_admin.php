@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <title>untitled</title>
-    <link href="stylesheets/public.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="css/public.css" media="all" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="header">
