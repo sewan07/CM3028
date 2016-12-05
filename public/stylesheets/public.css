@@ -105,7 +105,7 @@ a {
 .navHome {
     font-family: sans-serif;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
     margin-left: 2%;
     margin-right: 2%;
     padding-top: 50px;
@@ -114,7 +114,7 @@ a {
 .navAbout {
     font-family: sans-serif;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
     margin-left: 2%;
     margin-right: 2%;
     padding-top: 50px;
@@ -123,7 +123,7 @@ a {
 .navPort {
     font-family: sans-serif;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
     margin-left: 2%;
     margin-right: 2%;
     padding-top: 50px;
@@ -132,7 +132,7 @@ a {
 .navContact {
     font-family: sans-serif;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
     margin-left: 2%;
     margin-right: 2%;
     padding-top: 50px;
