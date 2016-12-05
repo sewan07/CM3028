@@ -24,8 +24,4 @@
     </nav>
   </div>
   </div>
-
-<footer>Copyright 2015 by Sewan Ale. Made with 100% recycled pixels.</footer>
 </body>
-
-</html>
