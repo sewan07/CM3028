@@ -1,32 +1,23 @@
-<?php require_once("../includes/db_connection.php"); ?>
+<?php require_once("../includes/session.php"); ?>
+<?php require_once("../includes/functions.php"); ?>
+<?php confirm_logged_in(); ?>
 
+<?php $layout_context = "admin"; ?>
+<?php include("../includes/layouts/header.php"); ?>
 
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-    "http://www.w3.org/TR/html4/loose.dtd">
-
-<html lang="en">
-<link href="stylesheets/public.css" media="all" rel="stylesheet" type="text/css" />
-<head>
-  <title> Portlethen </title>
-
-</head>
-<body>
-<div id="header">
-  <h1>Go Portlethen</h1>
+<div id="main">
+  <div id="navigation">
+    &nbsp;
+  </div>
+  <div id="page">
+    <h2>Admin Menu</h2>
+    <p>Welcome to the admin area, <?php echo htmlentities($_SESSION["username"]); ?>.</p>
+    <ul>
+      <li><a href="manage_content.php">Manage Website Content</a></li>
+      <li><a href="manage_admins.php">Manage Admin Users</a></li>
+      <li><a href="logout.php">Logout</a></li>
+    </ul>
+  </div>
 </div>
 
-
-    <nav>
-      <a href="manage_content" class="navHome">Manage Website Content</a>
-      <a href="manage_admins" class="navAbout">Manage Admin Users</a>
-      <a href="logout.php" class="navPort">Logout</a>
-    </nav>
-
-  </div>
-
-<footer>Copyright 2015 by Sewan Ale. Made with 100% recycled pixels.</footer>
-</body>
-
-</html>
-
+<?php include("../includes/layouts/footer.php"); ?>
