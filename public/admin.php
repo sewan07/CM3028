@@ -18,7 +18,7 @@
 
   <div id="navigation">
     <nav>
-      <a href="manage_content" class="navHome">Manage Website Content</a>
+      <a href="manage_content" class="navHome">Manage Website Contents</a>
       <a href="manage_admins" class="navAbout">Manage Admin Users</a>
       <a href="logout.php" class="navPort">Logout</a>
     </nav>
