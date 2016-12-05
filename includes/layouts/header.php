@@ -13,5 +13,5 @@
 	</head>
 	<body>
     <div id="header">
-      <h1>Widget Corp <?php if ($layout_context == "admin") { echo "Admin"; } ?></h1>
+      <h1>Portlethen <?php if ($layout_context == "admin") { echo "Admin"; } ?></h1>
     </div>
