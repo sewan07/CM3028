@@ -1,6 +1,6 @@
 <?php require_once("../includes/db_connection.php"); ?>
 
-<?php require_once("../includes/functions.php"); ?>
+
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
     "http://www.w3.org/TR/html4/loose.dtd">
@@ -24,6 +24,8 @@
     </nav>
   </div>
   </div>
+
+<footer>Copyright 2015 by Sewan Ale. Made with 100% recycled pixels.</footer>
 </body>
 
-<?php include("../includes/layouts/footer.php"); ?>
+</html>
