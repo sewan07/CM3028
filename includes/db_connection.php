@@ -1,8 +1,8 @@
 <?php
-	define("DB_SERVER", "localhost");
-	define("DB_USER", "widget_cms");
-	define("DB_PASS", "secretpassword");
-	define("DB_NAME", "widget_corp");
+	define("DB_SERVER", "us-cdbr-azure-southcentral-f.cloudapp.net");
+	define("DB_USER", "b762b602ac9c7b");
+	define("DB_PASS", "360b7be5");
+	define("DB_NAME", "cm3028rgu");
 
   // 1. Create a database connection
   $connection = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
