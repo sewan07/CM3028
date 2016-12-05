@@ -21,7 +21,7 @@ a:hover { color: #1A446C; }
 #header {
     text-align: center;
 }
-#header h1 { padding: 1em; margin: 0; }
+
 #main {
     height: 600px; width: 100%;
     margin: 0; padding: 0;
