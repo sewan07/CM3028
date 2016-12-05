@@ -41,7 +41,9 @@ body {
     font-style: normal;
     font-weight: 200;
     background-color:#bdc3c7;
-
+    background-image: url(../images/portlethen.jpg);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 #title{
