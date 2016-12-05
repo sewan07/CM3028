@@ -23,16 +23,21 @@ if (!$result) {
 		<title> Portlethen </title>
 
 	</head>
-	<body>
+	<nav>
 
-	<?php
-	// 3. Use returned data (if any)
-	while($row = mysqli_fetch_row($result)) {
-		// output data from each row
-		var_dump($row);
-		echo "<hr />";
-	}
-	?>
+		<?php
+		// 3. Use returned data (if any)
+		while($subject = mysqli_fetch_assoc($result)) {
+			// output data from each row
+			?>
+			<li><?php echo $subject["menu_name"] . " (" . $subject["id"] . ")"; ?></li>
+			<?php
+		}
+		?>
+
+
+	</nav>
+
 	<?php
 	// 4. Release returned data
 	mysqli_free_result($result);
@@ -40,7 +45,7 @@ if (!$result) {
 
 	<footer>Copyright 2015 by Sewan Ale. Made with 100% recycled pixels.</footer>
 	</body>
-
+	<body>
 	</html>
 
 <?php
