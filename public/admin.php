@@ -6,9 +6,10 @@
     "http://www.w3.org/TR/html4/loose.dtd">
 
 <html lang="en">
+<link href="stylesheets/public.css" media="all" rel="stylesheet" type="text/css" />
 <head>
   <title> Portlethen </title>
-  <link href="stylesheets/public.css" media="all" rel="stylesheet" type="text/css" />
+
 </head>
 <body>
 <div id="header">
