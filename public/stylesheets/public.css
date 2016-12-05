@@ -36,7 +36,7 @@ footer {
     padding-bottom: 5px;
     clear: both;
 }
-body {
+#main {
     font-family: sans-serif;
     font-style: normal;
     font-weight: 200;
