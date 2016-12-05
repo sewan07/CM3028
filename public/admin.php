@@ -16,13 +16,13 @@
   <h1>Go Portlethen</h1>
 </div>
 
-  <div id="navigation">
+
     <nav>
       <a href="manage_content" class="navHome">Manage Website Contents</a>
       <a href="manage_admins" class="navAbout">Manage Admin Users</a>
       <a href="logout.php" class="navPort">Logout</a>
     </nav>
-  </div>
+
   </div>
 
 <footer>Copyright 2015 by Sewan Ale. Made with 100% recycled pixels.</footer>
