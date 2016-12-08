@@ -1,11 +1,32 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-   "http://www.w3.org/TR/html4/loose.dtd">
+<?php require_once("../includes/session.php"); ?>
+<?php require_once("../includes/db_connection.php"); ?>
+<?php require_once("../includes/functions.php"); ?>
+<?php include("../includes/layouts/header.php"); ?>
+<?php find_selected_page(); ?>
 
-<html lang="en">
-	<head>
-		<title>untitled</title>
-	</head>
-	<body>
+<div id="main">
+	<div id="navigation">
 
-	</body>
-</html>
+
+		<?php echo navigation($current_subject, $current_page); ?>
+		<br />
+
+	</div>
+	<div id="page">
+
+		<?php if ($current_subject) { ?>
+			<h2>Manage Subject</h2>
+			Menu name: <?php echo htmlentities($current_subject["menu_name"]); ?><br />
+
+
+		<?php } elseif ($current_page) { ?>
+
+				<?php echo htmlentities($current_page["content"]); ?>
+
+		<?php } else { ?>
+			Please select a subject or a page.
+		<?php }?>
+	</div>
+</div>
+
+<?php include("../includes/layouts/footer.php"); ?>
