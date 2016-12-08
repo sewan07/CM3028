@@ -13,7 +13,8 @@
         <h2>Club Admin Menu</h2>
         <p>Welcome to the club admin area, <?php echo htmlentities($_SESSION["username"]); ?>.</p>
         <ul>
-            <li><a href="manage_content.php">Manage Website Content</a></li>
+            <li><a href="manage_content.php">Manage Club</a></li>
+
             <li><a href="logout.php">Logout</a></li>
         </ul>
     </div>
