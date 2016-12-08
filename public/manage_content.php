@@ -15,7 +15,7 @@
 				// output data from each row
 		?>
 				<li>
-				<a href="manage_content.php?subject=<?php echo urlencode($subject["id"])?>">	<?php echo $subject["menu_name"]; ?> </a>
+				<a href="manage_content.php?subject=<?php echo urlencode($subject["id"]);?>"<?php echo $subject["menu_name"]; ?> </a>
 					<?php
 					// 2. Perform database query
 					$page_set = find_pages_for_subject($subject["id"]);
@@ -27,7 +27,7 @@
 						// output data from each row
 						?>
 						<li>
-						<a href="manage_content.php?page=<?php echo urlencode($page["id"])?>"></a>	<?php echo $page["menu_name"]; ?> </a> </li>
+						<a href="manage_content.php?page=<?php echo urlencode($page["id"]);?>"><?php echo $page["menu_name"]; ?> </a> </li>
 							<?php
 						}
 						?>
