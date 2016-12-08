@@ -48,10 +48,11 @@
 		confirm_query($subject_set);
 		return $subject_set;
 	}
+
 	
 	function find_pages_for_subject($subject_id, $public=true) {
 		global $connection;
-		
+
 		$safe_subject_id = mysqli_real_escape_string($connection, $subject_id);
 		
 		$query  = "SELECT * ";
@@ -59,6 +60,7 @@
 		$query .= "WHERE subject_id = {$safe_subject_id} ";
 		if ($public) {
 			$query .= "AND visible = 1 ";
+
 		}
 		$query .= "ORDER BY position ASC";
 		$page_set = mysqli_query($connection, $query);
