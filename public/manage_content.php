@@ -21,7 +21,7 @@
 				// output data from each row
 		?>
 				<li>
-					<?php echo $subject["menu_name"] . " (" . $subject["id"] . ")"; ?>
+					<?php echo $subject["menu_name"]; ?>
 					<?php
 					// 2. Perform database query
 					$query  = "SELECT * ";
