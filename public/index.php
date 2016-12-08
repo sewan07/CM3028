@@ -8,7 +8,7 @@
 	<div id="navigation">
 
 
-		<?php echo navigation($current_subject, $current_page); ?>
+		<?php echo public_navigation($current_subject, $current_page); ?>
 		<br />
 
 	</div>
