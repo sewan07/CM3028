@@ -3,10 +3,10 @@
 
 <html lang="en">
 	<head>
-		<title>Widget Corp</title>
+		<title>Go Portlethen</title>
 		<link href="stylesheets/public.css" media="all" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
     <div id="header">
-      <h1>Widget Corp</h1>
+      <h1>Go Portlethen</h1>
     </div>

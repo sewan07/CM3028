@@ -38,10 +38,15 @@ a:hover { color: #1A446C; }
 
 /* Navigation */
 #navigation {
-	float: left;
-	width: 150px; height: 100%;
-	margin: 0; padding: 0 2em;
-	color: #D4E6F4; background: #8D0D19;
+    margin-top:15px
+}
+
+#navigation ul {
+    list-style:none;
+    position:relative;
+    float:left;
+    margin:0;
+    padding:0
 }
 #navigation a { color: #D4E6F4; text-decoration: none; }
 #navigation a:hover { color: #FFFFFF; }
