@@ -15,8 +15,7 @@
 		<?php if ($current_page) { ?>
 			
 			<h2><?php echo htmlentities($current_page["menu_name"]); ?></h2>
-            Position: <?php echo $current_subject["position"]; ?><br />
-            Visible: <?php echo $current_subject["visible"] == 1 ? 'yes' : 'no'; ?><br />
+
 			<?php echo nl2br(htmlentities($current_page["content"])); ?>
 
 
