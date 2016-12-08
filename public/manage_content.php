@@ -28,7 +28,9 @@
   <div id="page">
     <h2>Manage Content</h2>
 	  <?php if ($selected_subject_id) { ?>
+
 		  <?php echo $selected_subject_id; ?>
+
 		  <?php } elseif ($selected_page_id) { ?>
 		  <?php echo $selected_page_id; ?>
 		  <?php } else { ?>
