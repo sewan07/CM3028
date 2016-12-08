@@ -14,7 +14,7 @@
   </div>
   <div id="page">
     <?php echo message(); ?>
-    <h2>Manage Adminstrator</h2>
+    <h2>Manage Admins</h2>
     <table>
       <tr>
         <th style="text-align: left; width: 200px;">Username</th>
