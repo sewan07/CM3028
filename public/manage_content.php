@@ -57,7 +57,7 @@ if (isset($_GET["subject"])) {
 		</ul>
 	</div>
 	<div id="page">
-		<h2>Manage Content</h2>
+		<h2>Manage Contents</h2>
 		<?php echo $selected_subject_id; ?><br />
 		<?php echo $selected_page_id; ?>
 	</div>
