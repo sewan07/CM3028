@@ -1,4 +1,11 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
 
-<?php require_once("../includes/db_connection.php"); ?>
-<?php require_once("../includes/functions.php"); ?>
+<html lang="en">
+	<head>
+		<title>untitled</title>
+	</head>
+	<body>
 
+	</body>
+</html>
