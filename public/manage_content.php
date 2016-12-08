@@ -13,17 +13,17 @@
 
 <div id="main">
   <div id="navigation">
-		<li class="subjects">
+		<ul class="subjects">
 		<?php
 			// 3. Use returned data (if any)
 			while($subject = mysqli_fetch_assoc($result)) {
 				// output data from each row
 		?>
-				<ul><?php echo $subject["menu_name"] . " (" . $subject["id"] . ")"; ?></ul>
+				<li><?php echo $subject["menu_name"] . " (" . $subject["id"] . ")"; ?></li>
 	  <?php
 			}
 		?>
-		</li>
+		</ul>
   </div>
   <div id="page">
     <h2>Manage Content</h2>
