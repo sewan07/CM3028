@@ -4,7 +4,7 @@
 <html lang="en">
 	<head>
 		<title>Widget Corp</title>
-
+		<link href="stylesheets/public.css" media="all" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
     <div id="header">
