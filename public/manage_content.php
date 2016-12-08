@@ -22,7 +22,7 @@ if (isset($_GET["subject"])) {
 			<?php
 			while($subject = mysqli_fetch_assoc($subject_set)) {
 				?>
-				<li>
+				<li class="selected">
 					<a href="manage_content.php?subject=<?php echo urlencode($subject["id"]); ?>"><?php echo $subject["menu_name"]; ?></a>
 					<?php $page_set = find_pages_for_subject($subject["id"]); ?>
 					<ul class="pages">
