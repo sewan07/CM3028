@@ -32,6 +32,17 @@
     </table>
     <br />
     <a href="new_admin.php">Add new admin</a>
+
+<hr />
+    <?php
+    $password = "secret";
+    $hash_format = "$2y$10$";
+    $salt = "Salt22CharactersOrMore";
+    echo "Length: " . strlen($salt);
+    ?>
+
+
+
   </div>
 </div>
 <?php include("../includes/layouts/footer.php"); ?>
