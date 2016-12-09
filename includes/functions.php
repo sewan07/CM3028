@@ -49,20 +49,7 @@
 		return $subject_set;
 	}
 
-function find_club_pages($public=true) {
-	global $connection;
 
-	$query  = "SELECT * ";
-	$query .= "FROM pages ";
-	if ($public) {
-		$query .= "WHERE visible = 1 ";
-	}
-	$query .= "AND id = 1 ";
-	$query .= "ORDER BY position ASC";
-	$club_page_set = mysqli_query($connection, $query);
-	confirm_query($club_page_set);
-	return $club_page_set;
-}
 
 
 
