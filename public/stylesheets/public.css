@@ -83,6 +83,10 @@ ul.subjects ul ul {
 	padding:50px;
 }
 
+#log{
+	float:left;
+}
+
 #title{
 
 	text-align:center;
