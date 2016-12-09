@@ -7,8 +7,7 @@
 <?php find_selected_page(true); ?>
 
 <div id="main">
-    <div id="log">
-    <a href="choose_admin.php"> Log in </a> </div>
+
   <div id="navigation">
 		<?php echo public_navigation($current_subject, $current_page); ?> <br />
 
