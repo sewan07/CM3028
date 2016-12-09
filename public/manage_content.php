@@ -22,13 +22,13 @@
 				// output data from each row
 		?>
 				<li>
-					<?php echo $subject["menu_name"] . " (" . $subject["id"] . ")"; ?>
+					<?php echo $subject["menu_name"]; ?>
 					<?php
 					// 2. Perform database query
 					$query  = "SELECT * ";
 					$query .= "FROM pages ";
 					$query .= "WHERE visible = 1 ";
-					$query .= "AND subject_id = {$subject["id"]} ";
+					$query .= "AND id = 1 ";
 					$query .= "ORDER BY position ASC";
 					$page_set = mysqli_query($connection, $query);
 					confirm_query($page_set);
