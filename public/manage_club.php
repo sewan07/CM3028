@@ -33,6 +33,7 @@
                         while($page = mysqli_fetch_assoc($page_set)) {
                             ?>
                             <li><?php echo $page["menu_name"]; ?></li>
+                            <a href="edit_club_page.php?page=<?php echo urlencode($current_page['id']); ?>">Edit Club page</a>
                             <?php
                         }
                         ?>
