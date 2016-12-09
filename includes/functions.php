@@ -13,7 +13,7 @@
 		$query .= "FROM subjects ";
 		// $query .= "WHERE visible = 1 ";
 		$query .= "ORDER BY position ASC";
-
+		$query .= "AND id = 2 ";
 		$subject_set = mysqli_query($connection, $query);
 		confirm_query($subject_set);
 		return $subject_set;
