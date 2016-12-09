@@ -12,7 +12,7 @@
 if (!$current_page) {
     // page ID was missing or invalid or
     // page couldn't be found in database
-    redirect_to("sportlethen.php");
+    redirect_to("manage_content.php");
 }
 ?>
 
@@ -49,7 +49,7 @@ if (isset($_POST['submit'])) {
         if ($result && mysqli_affected_rows($connection) == 1) {
             // Success
             $_SESSION["message"] = "Page updated.";
-            redirect_to("sportlethen.php?page={$id}");
+            redirect_to("manage_content.php?page={$id}");
         } else {
             // Failure
             $_SESSION["message"] = "Page update failed.";
