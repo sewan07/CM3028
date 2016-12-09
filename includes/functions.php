@@ -64,7 +64,7 @@
 			$query .= "AND visible = 1 ";
 
 		}
-		$query .= "AND id = 1 ";
+
 		$query .= "ORDER BY position ASC";
 		$page_set = mysqli_query($connection, $query);
 		confirm_query($page_set);
