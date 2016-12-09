@@ -49,7 +49,7 @@ if (isset($_POST['submit'])) {
         if ($result && mysqli_affected_rows($connection) == 1) {
             // Success
             $_SESSION["message"] = "Page updated.";
-            redirect_to("sportlethen.php?page=1");
+            redirect_to("sportlethen.php?page={$id}");
         } else {
             // Failure
             $_SESSION["message"] = "Page update failed.";
