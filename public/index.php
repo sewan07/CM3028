@@ -23,7 +23,7 @@
 		<?php } else { ?>
 
             <div id="title">
-                <h1><strong>Hello everyone !</strong></h1>
+                <h1><strong>Hello everyones !</strong></h1>
                 <h1> We are an association of local and progressive sports clubs </h1>
                 <h1> Who are working together to develop safe and fun sports and .</h1>
                 <h1> fitness activities in the Porthlethen area.</h1>
