@@ -85,9 +85,10 @@ ul.subjects ul ul {
 
 #log{
 	float:right;
-	margin:30px;
+	margin:14px;
 	display: block;
 	background: #e74c3c;
+	padding:15px;
 
 }
 
