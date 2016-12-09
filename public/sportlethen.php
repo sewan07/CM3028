@@ -47,7 +47,7 @@
     </div>
     <div id="page">
         <h2>Manage Content</h2>
-        <a href="edit_club_page.php?page=<?php echo urlencode($current_page['id']); ?>">Edit page</a>
+
     </div>
 </div>
 
