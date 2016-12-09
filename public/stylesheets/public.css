@@ -69,3 +69,21 @@ ul.subjects ul ul {
 	left: 100%;
 	top:0;
 }
+
+#header {
+	text-align: center;
+}
+
+#page {
+	height: 100%;
+	vertical-align: top;
+	background: #EEE4B9;
+}
+
+#footer {
+	clear: both;
+	height: 2em; margin: 0; padding: 1em;
+	text-align: center;
+
+}
+
