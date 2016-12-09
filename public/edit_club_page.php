@@ -12,7 +12,7 @@
 if (!$current_page) {
     // page ID was missing or invalid or
     // page couldn't be found in database
-    redirect_to("manage_content.php");
+    redirect_to("sportlethen.php");
 }
 ?>
 
@@ -42,14 +42,14 @@ if (isset($_POST['submit'])) {
         $query .= "position = {$position}, ";
         $query .= "visible = {$visible}, ";
         $query .= "content = '{$content}' ";
-        $query .= "WHERE id = {$id} ";
+        $query .= "WHERE id = 1 ";
         $query .= "LIMIT 1";
         $result = mysqli_query($connection, $query);
 
         if ($result && mysqli_affected_rows($connection) == 1) {
             // Success
             $_SESSION["message"] = "Page updated.";
-            redirect_to("manage_content.php?page={$id}");
+            redirect_to("sportlethen.php?page=1");
         } else {
             // Failure
             $_SESSION["message"] = "Page update failed.";
