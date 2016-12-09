@@ -21,7 +21,7 @@
 
 		<?php } else { ?>
 			
-			<p>Welcomes!</p>
+			<p>Welcome</p>
 			
 		<?php }?>
   </div>
