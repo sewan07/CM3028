@@ -99,7 +99,7 @@ if (isset($_POST['submit'])) {
                 &nbsp;
                 <input type="radio" name="visible" value="1" <?php if ($current_page["visible"] == 1) { echo "checked"; } ?>/> Yes
             </p>
-            <p>Content:<br />
+            <p>Contents:<br />
                 <textarea name="content" rows="20" cols="80"><?php echo htmlentities($current_page["content"]); ?></textarea>
             </p>
             <input type="submit" name="submit" value="Edit Page" />
