@@ -30,7 +30,7 @@ a:hover { color: #1A446C; }
 
 /* Navigation */
 #navigation {
-	position: fixed;
+
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -38,7 +38,7 @@ a:hover { color: #1A446C; }
 	box-shadow: 0 3px 10px -2px rgba(0,0,0,.1);
 	border: 1px solid rgba(0,0,0,.1);
 }
-#navigation a { display: block;
+#navigation a {
 	padding: 30px 20px;
 	color: #222;
 	font-size: .9em;
@@ -50,7 +50,7 @@ ul.subjects {
 	list-style: none;
 	position: relative;
 	float: right;
-	margin-right: 100px;
+	margin-right: 50px;
 	display: inline-table;
 }
 ul.subjects li{
