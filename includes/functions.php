@@ -28,7 +28,7 @@
 		$query .= "FROM pages ";
 		$query .= "WHERE visible = 1 ";
 		$query .= "AND subject_id = {$safe_subject_id} ";
-		$query .= "AND id = 1 ";
+
 		$query .= "ORDER BY position ASC";
 		$page_set = mysqli_query($connection, $query);
 		confirm_query($page_set);
