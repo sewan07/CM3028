@@ -10,7 +10,7 @@
     <a href="choose_admin.php"> Log in </a>
   <div id="navigation">
 		<?php echo public_navigation($current_subject, $current_page); ?> <br />
-      <a href="choose_admin.php"> Log in </a>
+
   </div>
   <div id="page">
 		<?php if ($current_page) { ?>
