@@ -2,6 +2,8 @@
 <?php require_once("../includes/functions.php"); ?>
 <?php include("../includes/layouts/header.php"); ?>
 
+<?php find_selected_page(); ?>
+
 <div id="main">
     <div id="navigation">
         <ul class="subjects">
