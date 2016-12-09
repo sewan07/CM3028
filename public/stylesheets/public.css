@@ -80,6 +80,22 @@ ul.subjects ul ul {
 	background: #EEE4B9;
 }
 
+#title{
+
+	text-align:center;
+
+	margin-top: 20px;
+
+}
+
+#explore{
+
+	text-align:center;
+
+	margin-top: 20px;
+
+}
+
 #footer {
 	clear: both;
 	height: 2em; margin: 0; padding: 1em;
