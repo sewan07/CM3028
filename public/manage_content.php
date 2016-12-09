@@ -11,7 +11,7 @@
 				?>
 				<li>
 					<?php echo $subject["menu_name"]; ?>
-					<?php $page_set = find_pages_for_subject($subject["id"]); ?>
+					<?php $page_set = find_pages_for_subject(); ?>
 					<ul class="pages">
 						<?php
 						while($page = mysqli_fetch_assoc($page_set)) {
