@@ -4,65 +4,57 @@
 <?php require_once("../includes/validation_functions.php"); ?>
 <?php confirm_logged_in(); ?>
 
-<?php find_selected_page(); ?>
 
-<?php
-// Unlike new_page.php, we don't need a subject_id to be sent
-// We already have it stored in pages.subject_id.
-if (!$current_page) {
-    // page ID was missing or invalid or
-    // page couldn't be found in database
-    redirect_to("sportlethen.php");
-}
-?>
+<div id="main">
+    <div id="navigation">
+        <ul class="subjects">
+            <?php
+            $query  = "SELECT * ";
+            $query .= "FROM subjects ";
+            $query .= "WHERE visible = 1 ";
+            $query .= "AND id = 2 ";
+            $query .= "ORDER BY position ASC";
+            $subject_set = mysqli_query($connection, $query);
+            confirm_query($subject_set);
+            ?>
+            <?php
+            while($subject = mysqli_fetch_assoc($subject_set)) {
+                ?>
+                <li>
+                    <?php echo $subject["menu_name"]; ?>
+                    <?php
+                    $query  = "SELECT * ";
+                    $query .= "FROM pages ";
+                    $query .= "WHERE visible = 1 ";
+                    $query .= "AND id = 1 ";
+                    $query .= "ORDER BY position ASC";
+                    $page_set = mysqli_query($connection, $query);
+                    confirm_query($page_set);
+                    ?>
+                    <ul class="pages">
+                        <?php
+                        while($page = mysqli_fetch_assoc($page_set)) {
+                            ?>
+                            <a href="edit_club_page.php"> <li><?php echo $page["menu_name"]; ?></li> </a>
+                            <?php
+                        }
+                        ?>
+                        <?php mysqli_free_result($page_set); ?>
+                    </ul>
+                </li>
+                <?php
+            }
+            ?>
+            <?php mysqli_free_result($subject_set); ?>
+        </ul>
+    </div>
+    <div id="page">
+        <h2>Manage Content</h2>
 
-<?php
-if (isset($_POST['submit'])) {
-    // Process the form
+    </div>
+</div>
 
-    $id = $current_page["id"];
-    $menu_name = mysql_prep($_POST["menu_name"]);
-    $position = (int) $_POST["position"];
-    $visible = (int) $_POST["visible"];
-    $content = mysql_prep($_POST["content"]);
-
-    // validations
-    $required_fields = array("menu_name", "position", "visible", "content");
-    validate_presences($required_fields);
-
-    $fields_with_max_lengths = array("menu_name" => 30);
-    validate_max_lengths($fields_with_max_lengths);
-
-    if (empty($errors)) {
-
-        // Perform Update
-
-        $query  = "SELECT * ";
-        $query .= "FROM pages ";
-        $query .= "WHERE visible = 1 ";
-        $query .= "AND id = 1 ";
-        $query .= "ORDER BY position ASC";
-        $result = mysqli_query($connection, $query);
-
-        if ($result && mysqli_affected_rows($connection) == 1) {
-            // Success
-            $_SESSION["message"] = "Page updated.";
-            redirect_to("sportlethen.php?page={$id}");
-        } else {
-            // Failure
-            $_SESSION["message"] = "Page update failed.";
-        }
-
-    }
-} else {
-    // This is probably a GET request
-
-} // end: if (isset($_POST['submit']))
-
-?>
-
-<?php $layout_context = "admin"; ?>
-<?php include("../includes/layouts/header.php"); ?>
+<?php include("../includes/layouts/footer.php"); ?>
 
 <div id="main">
     <div id="navigation">
