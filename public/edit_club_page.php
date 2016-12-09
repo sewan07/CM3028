@@ -4,57 +4,64 @@
 <?php require_once("../includes/validation_functions.php"); ?>
 <?php confirm_logged_in(); ?>
 
+<?php find_selected_page(); ?>
 
-<div id="main">
-    <div id="navigation">
-        <ul class="subjects">
-            <?php
-            $query  = "SELECT * ";
-            $query .= "FROM subjects ";
-            $query .= "WHERE visible = 1 ";
-            $query .= "AND id = 2 ";
-            $query .= "ORDER BY position ASC";
-            $sport_set = mysqli_query($connection, $query);
-            confirm_query($sport_set);
-            ?>
-            <?php
-            while($subject = mysqli_fetch_assoc($subject_set)) {
-                ?>
-                <li>
-                    <?php echo $subject["menu_name"]; ?>
-                    <?php
-                    $query  = "SELECT * ";
-                    $query .= "FROM pages ";
-                    $query .= "WHERE visible = 1 ";
-                    $query .= "AND id = 1 ";
-                    $query .= "ORDER BY position ASC";
-                    $sport_page_set = mysqli_query($connection, $query);
-                    confirm_query($sport_page_set);
-                    ?>
-                    <ul class="pages">
-                        <?php
-                        while($page = mysqli_fetch_assoc($sport_page_set)) {
-                            ?>
-                            <a href="edit_club_page.php"> <li><?php echo $page["menu_name"]; ?></li> </a>
-                            <?php
-                        }
-                        ?>
-                        <?php mysqli_free_result($sport_page_set); ?>
-                    </ul>
-                </li>
-                <?php
-            }
-            ?>
-            <?php mysqli_free_result($sport_set); ?>
-        </ul>
-    </div>
-    <div id="page">
-        <h2>Manage Contents</h2>
+<?php
+// Unlike new_page.php, we don't need a subject_id to be sent
+// We already have it stored in pages.subject_id.
+if (!$current_page) {
+    // page ID was missing or invalid or
+    // page couldn't be found in database
+    redirect_to("manage_content.php");
+}
+?>
 
-    </div>
-</div>
+<?php
+if (isset($_POST['submit'])) {
+    // Process the form
 
-<?php include("../includes/layouts/footer.php"); ?>
+    $id = $current_page["id"];
+    $menu_name = mysql_prep($_POST["menu_name"]);
+    $position = (int) $_POST["position"];
+    $visible = (int) $_POST["visible"];
+    $content = mysql_prep($_POST["content"]);
+
+    // validations
+    $required_fields = array("menu_name", "position", "visible", "content");
+    validate_presences($required_fields);
+
+    $fields_with_max_lengths = array("menu_name" => 30);
+    validate_max_lengths($fields_with_max_lengths);
+
+    if (empty($errors)) {
+
+        // Perform Update
+
+        $query  = "UPDATE pages SET ";
+        $query .= "menu_name = '{$menu_name}', ";
+        $query .= "position = {$position}, ";
+        $query .= "visible = {$visible}, ";
+        $query .= "content = '{$content}' ";
+        $query .= "WHERE id = {$id} ";
+        $query .= "LIMIT 1";
+        $result = mysqli_query($connection, $query);
+
+        if ($result && mysqli_affected_rows($connection) == 1) {
+            // Success
+            $_SESSION["message"] = "Page updated.";
+            redirect_to("manage_content.php?page={$id}");
+        } else {
+            // Failure
+            $_SESSION["message"] = "Page update failed.";
+        }
+
+    }
+} else {
+    // This is probably a GET request
+
+} // end: if (isset($_POST['submit']))
+
+?>
 
 <?php $layout_context = "admin"; ?>
 <?php include("../includes/layouts/header.php"); ?>
@@ -75,7 +82,7 @@
             <p>Position:
                 <select name="position">
                     <?php
-                    $sport_page_set = find_pages_for_subject($current_page["subject_id"], false);
+                    $page_set = find_pages_for_subject($current_page["subject_id"], false);
                     $page_count = mysqli_num_rows($page_set);
                     for($count=1; $count <= $page_count; $count++) {
                         echo "<option value=\"{$count}\"";
