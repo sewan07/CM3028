@@ -42,7 +42,7 @@ if (isset($_POST['submit'])) {
         $query .= "position = {$position}, ";
         $query .= "visible = {$visible}, ";
         $query .= "content = '{$content}' ";
-        $query .= "WHERE id = 1 ";
+        $query .= "WHERE id = {$id} ";
         $query .= "LIMIT 1";
         $result = mysqli_query($connection, $query);
 
