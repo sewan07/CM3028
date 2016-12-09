@@ -49,7 +49,7 @@
         </ul>
     </div>
     <div id="page">
-        <h2>Manage Content</h2>
+        <h2>Manage Contents</h2>
 
     </div>
 </div>
