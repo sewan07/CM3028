@@ -37,13 +37,11 @@ if (isset($_POST['submit'])) {
 
         // Perform Update
 
-        $query  = "UPDATE pages SET ";
-        $query .= "menu_name = '{$menu_name}', ";
-        $query .= "position = {$position}, ";
-        $query .= "visible = {$visible}, ";
-        $query .= "content = '{$content}' ";
-        $query .= "WHERE id = {$id} ";
-        $query .= "LIMIT 1";
+        $query  = "SELECT * ";
+        $query .= "FROM pages ";
+        $query .= "WHERE visible = 1 ";
+        $query .= "AND id = 1 ";
+        $query .= "ORDER BY position ASC";
         $result = mysqli_query($connection, $query);
 
         if ($result && mysqli_affected_rows($connection) == 1) {
