@@ -25,7 +25,7 @@
 ul.subjects{
 	list-style: none;
 	position: relative;
-    margin-left: 500px;
+    margin-left: 90px;
 	display: inline-table;
 }
 ul.subjects li{
@@ -45,7 +45,7 @@ ul.subjects li{
 }
 ul.subjects li a{
 	display: block;
-	padding: 30px 20px;
+	padding: 30px 40px;
 	color: #222;
 	font-size: .9em;
 	letter-spacing: 1px;
