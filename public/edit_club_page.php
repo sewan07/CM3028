@@ -14,8 +14,8 @@
             $query .= "WHERE visible = 1 ";
             $query .= "AND id = 2 ";
             $query .= "ORDER BY position ASC";
-            $subject_set = mysqli_query($connection, $query);
-            confirm_query($subject_set);
+            $sport_set = mysqli_query($connection, $query);
+            confirm_query($sport_set);
             ?>
             <?php
             while($subject = mysqli_fetch_assoc($subject_set)) {
@@ -28,24 +28,24 @@
                     $query .= "WHERE visible = 1 ";
                     $query .= "AND id = 1 ";
                     $query .= "ORDER BY position ASC";
-                    $page_set = mysqli_query($connection, $query);
-                    confirm_query($page_set);
+                    $sport_page_set = mysqli_query($connection, $query);
+                    confirm_query($sport_page_set);
                     ?>
                     <ul class="pages">
                         <?php
-                        while($page = mysqli_fetch_assoc($page_set)) {
+                        while($page = mysqli_fetch_assoc($sport_page_set)) {
                             ?>
                             <a href="edit_club_page.php"> <li><?php echo $page["menu_name"]; ?></li> </a>
                             <?php
                         }
                         ?>
-                        <?php mysqli_free_result($page_set); ?>
+                        <?php mysqli_free_result($sport_page_set); ?>
                     </ul>
                 </li>
                 <?php
             }
             ?>
-            <?php mysqli_free_result($subject_set); ?>
+            <?php mysqli_free_result($sport_set); ?>
         </ul>
     </div>
     <div id="page">
@@ -75,7 +75,7 @@
             <p>Position:
                 <select name="position">
                     <?php
-                    $page_set = find_pages_for_subject($current_page["subject_id"], false);
+                    $sport_page_set = find_pages_for_subject($current_page["subject_id"], false);
                     $page_count = mysqli_num_rows($page_set);
                     for($count=1; $count <= $page_count; $count++) {
                         echo "<option value=\"{$count}\"";
