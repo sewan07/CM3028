@@ -13,7 +13,7 @@
 	</head>
 	<body>
     <div id="header">
-      <h1>Go Portlethen <?php if ($layout_context == "admin") { echo "Admin"; } ?></h1>
+		<a href="index.php">  <h1>Go Portlethen <?php if ($layout_context == "admin") { echo "Admin"; } ?></h1> </a>
     </div>
 	<div id="log">
 		<a href="choose_admin.php"> Log in </a> </div>
