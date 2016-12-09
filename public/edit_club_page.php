@@ -60,7 +60,7 @@
         <?php echo form_errors($errors); ?>
 
         <h2>Edit Page: <?php echo htmlentities($current_page["menu_name"]); ?></h2>
-        <form action="edit_page.php?page=<?php echo urlencode($current_page["id"]); ?>" method="post">
+        <form action="edit_club_page.php?page=<?php echo urlencode($current_page["id"]); ?>" method="post">
             <p>Menu name:
                 <input type="text" name="menu_name" value="<?php echo htmlentities($current_page["menu_name"]); ?>" />
             </p>
