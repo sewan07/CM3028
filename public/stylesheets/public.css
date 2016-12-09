@@ -19,9 +19,8 @@ a { color: #8D0D19; }
 a:hover { color: #1A446C; }
 
 #header {
-	height: 70px;
-	margin: 0; padding: 0; text-align: left;
-	background: #1A446C; color: #D4E6F4;
+	text-align:center;
+	margin-top:50px;
 }
 #header h1 { padding: 1em; margin: 0; }
 #main {
