@@ -11,7 +11,7 @@ function find_all_subjects() {
 
 	$query  = "SELECT * ";
 	$query .= "FROM subjects ";
-	$query .= "WHERE visible = 1 ";
+	//$query .= "WHERE visible = 1 ";
 	$query .= "AND id = 2 ";
 	$query .= "ORDER BY position ASC";
 	$subject_set = mysqli_query($connection, $query);
@@ -73,4 +73,24 @@ function navigation($subject_id, $page_id) {
 	return $output;
 }
 
+function find_subject_by_id($subject_id){
+	global $connection;
+	$safe_subject_id = mysqli_real_escape_string($connection,$subject_id);
+	$query  = "SELECT * ";
+	$query .= "FROM subjects ";
+	$query .= "WHERE visible = 1 ";
+	$query .= "AND id = {$safe_subject_id} ";
+	$query .= "LIMIT 1";
+	$subject_set = mysqli_query($connection, $query);
+	confirm_query($subject_set);
+	if ($subject = mysqli_fetch_assoc($subject_set)) {
+		return $subject_set;
+	} else{
+		return null;
+	}
+}
+
 ?>
+
+
+
