@@ -15,27 +15,25 @@ if (isset($_GET["subject"])) {
 }
 
 ?>
-	<div id="main">
-		<div id="navigation">
-			<?php echo navigation($selected_subject_id, $selected_page_id); ?>
-		</div>
-		<div id="page">
-			<?php if ($selected_subject_id) { ?>
-				<h2>Manage Subject</h2>
-				<?php $current_subject = find_subject_by_id($selected_subject_id); ?>
-				Menu name: <?php echo $current_subject["menu_name"]; ?><br />
-
-			<?php } elseif ($selected_page_id) { ?>
-				<h2>Manage Page</h2>
-				<?php $current_page = find_page_by_id($selected_page_id); ?>
-				Menu name: <?php echo $current_page["menu_name"]; ?><br />
-
-			<?php } else { ?>
-				Please select a subject or a page.
-			<?php }?>
-
-
-		</div>
+<div id="main">
+	<div id="navigation">
+		<?php echo navigation($selected_subject_id, $selected_page_id); ?>
 	</div>
+	<div id="page">
+		<?php if ($selected_subject_id) { ?>
+			<h2>Manage Subject</h2>
+			<?php $current_subject = find_subject_by_id($selected_subject_id); ?>
+			Menu name: <?php echo $current_subject["menu_name"]; ?><br />
+
+		<?php } elseif ($selected_page_id) { ?>
+			<h2>Manage Page</h2>
+			<?php $current_page = find_page_by_id($selected_page_id); ?>
+			Menu name: <?php echo $current_page["menu_name"]; ?><br />
+
+		<?php } else { ?>
+			Please select a subject or a page.
+		<?php }?>
+	</div>
+</div>
 
 <?php include("../includes/layouts/footer.php"); ?>
