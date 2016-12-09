@@ -5,7 +5,7 @@
 	$query  = "SELECT * ";
 	$query .= "FROM subjects ";
 	$query .= "WHERE visible = 1 ";
-    $query .= "AND id = 2";
+    $query .= "AND id = 2 ";
 	$query .= "ORDER BY position ASC";
 	$result = mysqli_query($connection, $query);
 	confirm_query($result);
