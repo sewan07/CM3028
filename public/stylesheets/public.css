@@ -24,12 +24,12 @@
 ul.subjects{
 	list-style: none;
 	position: relative;
-
+	width:100%;
 	margin-right: 100px;
 	display: inline-table;
 }
 ul.subjects li{
-	float: left;
+
 	-webkit-transition: all .2s ease-in-out;
 	-moz-transition: all .2s ease-in-out;
 	transition: all .2s ease-in-out;
@@ -38,7 +38,7 @@ ul.subjects li{
 ul.subjects li:hover{background: rgba(0,0,0,.15);}
 ul.subjects li:hover > ul{display: block;}
 ul.subjects li{
-	float: left;
+
 	-webkit-transition: all .2s ease-in-out;
 	-moz-transition: all .2s ease-in-out;
 	transition: all .2s ease-in-out;
