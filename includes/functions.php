@@ -42,7 +42,7 @@
 		
 		$query  = "SELECT * ";
 		$query .= "FROM subjects ";
-		$query .= "WHERE id = {$safe_subject_id} ";
+		$query .= "WHERE id = 2 ";
 		$query .= "LIMIT 1";
 		$subject_set = mysqli_query($connection, $query);
 		confirm_query($subject_set);
@@ -60,7 +60,7 @@
 		
 		$query  = "SELECT * ";
 		$query .= "FROM pages ";
-		$query .= "WHERE id = {$safe_page_id} ";
+		$query .= "WHERE id = 1 ";
 		$query .= "LIMIT 1";
 		$page_set = mysqli_query($connection, $query);
 		confirm_query($page_set);
