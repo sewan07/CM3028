@@ -1,6 +1,4 @@
 
-<li>
-    <?php echo $subject["menu_name"]; ?>
     <?php
     $query  = "SELECT * ";
     $query .= "FROM pages ";
@@ -20,7 +18,6 @@
         ?>
         <?php mysqli_free_result($page_set); ?>
     </ul>
-</li>
 
 
 
