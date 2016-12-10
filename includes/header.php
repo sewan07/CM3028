@@ -19,7 +19,9 @@
 		?>
 		<p> <?php
 		do {
-echo $cat_rs['menu_name'];
+echo $cat_rs['menu_name']; ?> |
+			<?php
+
 		} while ($cat_rs=mysqli_fetch_assoc($cat_query))
 
 
