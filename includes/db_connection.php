@@ -5,7 +5,7 @@
 	define("DB_NAME", "cm3028rgu");
 
   // 1. Create a database connection
-  $dbconnect = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
+  $connection = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
   // Test if connection succeeded
   if(mysqli_connect_errno()) {
     die("Database connection failed: " . 
