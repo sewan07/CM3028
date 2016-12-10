@@ -19,7 +19,7 @@
 		?>
 		<p> <?php
 		do { ?>
-			<a href="category.php"><?php echo $cat_rs['menu_name']; ?></a>
+			<a href="category.php?id=<?php echo $cat_rs['id']; ?>"><?php echo $cat_rs['menu_name']; ?></a>
 
 				<?php
 
