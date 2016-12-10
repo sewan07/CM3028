@@ -6,12 +6,11 @@
 <?php include("../includes/layouts/header.php"); ?>
 <?php find_selected_page(true); ?>
 
-<div id="main">
 
-  <div id="navigation">
-		<?php echo public_navigation($current_subject, $current_page); ?> <br />
+
 
   </div>
+<div id="main">
   <div id="page">
 		<?php if ($current_page) { ?>
 			
