@@ -12,8 +12,17 @@
 
 <body>
 <div class="container">
+
+
     <?php
     include("header.php");
+if(!isset($GET['page'])) {
+
+?> <div class="banner"><img src="images/banner.jpg" ali="Portlethen" /></div>
+    <?php
+}
+
+
     ?>
     <div class="maincontent">
         <!-- main content goes here-->
