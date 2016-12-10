@@ -4,7 +4,7 @@
 ?>
 <html>
 <head>
-<title>Welcome to Chic Clothing</title>
+<title>Portlethen</title>
 
 <link href="styles.css" rel="stylesheet" type="text/css" />
 </head>
