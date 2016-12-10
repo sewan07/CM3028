@@ -1,5 +1,5 @@
 <?php
-if(!isset($GET['subject_id'])){
+if(!isset($GET['id'])){
     header("Location:index.php");
 }
 
