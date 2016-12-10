@@ -1,23 +1,25 @@
 
-    <?php
-    $query  = "SELECT * ";
-    $query .= "FROM pages ";
-    $query .= "WHERE visible = 1 ";
-    $query .= "AND subject_id = {$subject["id"]} ";
-    $query .= "ORDER BY position ASC";
-    $page_set = mysqli_query($connection, $query);
-    confirm_query($page_set);
+<?php
+$stock_sql="SELECT menu_name,content FROM pages JOIN subjects ON pages.subject_id=subjects.id WHERE pages.subject_id=2";
+
+if($stock_query=mysqli_query($connection,$stock_sql)){
+    $stock_rs=mysqli_fetch_assoc($stock_query);
+}
+
+if(mysqli_num_rows($stock_query)==0) {
+    echo "Sorry, we have no items currently in stock";
+} else {
     ?>
-    <ul class="pages">
-        <?php
-        while($page = mysqli_fetch_assoc($page_set)) {
-            ?>
-            <li><?php echo $page["menu_name"]; ?></li>
-            <?php
-        }
+    <h1><?php echo $stock_rs['catname']; ?></h1>
+    <?php do {
         ?>
-        <?php mysqli_free_result($page_set); ?>
-    </ul>
-
-
-
+        <div class="item">
+            <p><?php echo $stock_rs['menu_name']; ?></p>
+            <p>$<?php echo $stock_rs['content']; ?></p>
+        </div>
+        <?php
+    } while ($stock_rs=mysqli_fetch_assoc($stock_query));
+    ?>
+    <?php
+}
+?>
