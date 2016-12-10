@@ -18,7 +18,7 @@
     include("header.php");
 if(!isset($GET['page'])) {
 
-?> <div class="banner"><img src="images/banner.jpg" ali="Portlethen" /></div>
+?> <div class="banner"><img src="images/banner.jpg" alt="Portlethen" /></div>
     <?php
 }
 
