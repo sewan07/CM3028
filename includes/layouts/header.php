@@ -9,9 +9,7 @@
 <html lang="en">
 	<head>
 		<title>Go Portlethen <?php if ($layout_context == "admin") { echo "Admin"; } ?></title>
-
 		<link href="stylesheets/public.css" media="all" rel="stylesheet" type="text/css" />
-		<link href="css/bootstrap.css" media="all" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
     <div id="header">
@@ -19,5 +17,3 @@
     </div>
 	<div id="log">
 		<a href="choose_admin.php"> Log in </a> </div>
-	<div id="navigation">
-		<?php echo public_navigation($current_subject, $current_page); ?> <br />
