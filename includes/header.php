@@ -24,6 +24,7 @@ echo $cat_rs['menu_name']; ?> |
 
 		} while ($cat_rs=mysqli_fetch_assoc($cat_query))
 
-
 ?>
+		<a href="admin.php">Admin</a>
+		</p>
 	</div>
