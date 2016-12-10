@@ -1,12 +1,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-	"http://www.w3.org/TR/html4/loose.dtd">
+   "http://www.w3.org/TR/html4/loose.dtd">
 
 <html lang="en">
-<head>
-	<title>Go Portlethen</title>
-	<link href="stylesheets/public.css" media="all" rel="stylesheet" type="text/css" />
-</head>
-<body>
-<div id="header">
-	<h1>Go Portlethen</h1>
-</div>
+	<head>
+		<title>Widget Corp</title>
+		<link href="stylesheets/public.css" media="all" rel="stylesheet" type="text/css" />
+		<link href="css/bootstrap.css" media="all" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+    <div id="header">
+      <h1>Widget Corp</h1>
+    </div>

@@ -1,4 +1,6 @@
-<?php require_once("../includes/layouts/header.php"); ?>
+<?php require_once("../includes/functions.php"); ?>
+<?php include("../includes/layouts/header.php"); ?>
+
 <div id="main">
   <div id="navigation">
     &nbsp;
@@ -13,4 +15,5 @@
     </ul>
   </div>
 </div>
-<?php require_once("../includes/layouts/footer.php"); ?>
+
+<?php include("../includes/layouts/footer.php"); ?>
