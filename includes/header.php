@@ -18,9 +18,10 @@
 		$cat_rs=mysqli_fetch_assoc($cat_query);
 		?>
 		<p> <?php
-		do {
-echo $cat_rs['menu_name']; ?> |
-			<?php
+		do { ?>
+			<a href="category.php"><?php echo $cat_rs['menu_name']; ?></a>
+
+				<?php
 
 		} while ($cat_rs=mysqli_fetch_assoc($cat_query))
 
