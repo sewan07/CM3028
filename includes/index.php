@@ -25,8 +25,18 @@ if(!isset($GET['page'])) {
 
     ?>
     <div class="maincontent">
-        <!-- main content goes here-->
-        <p>Lorem ipsum goes here</p>
+
+        <?php
+        if(!isset($GET['page'])) {
+            include("home.php");
+        } else {
+            $page=$_GET['page'];
+            include("$page.php");
+        }
+        ?>
+
+
+
     </div>
     <?php
     include("seccontent.php");
