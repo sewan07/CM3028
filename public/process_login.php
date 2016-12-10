@@ -1,2 +1,2 @@
 <?php
-password('secret', PASSWORD_DEFAULT);
+password_hash('secret', PASSWORD_DEFAULT);
