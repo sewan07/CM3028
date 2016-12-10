@@ -1,6 +1,6 @@
 
 <?php
-$stock_sql="SELECT menu_name,content FROM pages JOIN subjects ON pages.subject_id=subjects.id WHERE pages.subject_id=2";
+$stock_sql="SELECT menu_name,content FROM pages JOIN subjects ON pages.subject_id=subjects.id WHERE pages.subject_id=1";
 
 if($stock_query=mysqli_query($connection,$stock_sql)){
     $stock_rs=mysqli_fetch_assoc($stock_query);
