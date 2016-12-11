@@ -21,10 +21,10 @@
 			 $images = $current_page['images'];
             //var_dump($images);
 			 $images = explode(',', $images);
-			 print_r($images);
+
 
             foreach($images as  $image) {
-                echo '<img src="http://visitportlethen.azurewebsites.net/public/images/'. $image . '">';
+                echo '<img src="img1.jpg">';
             }
 
 			 ?>
