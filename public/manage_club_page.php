@@ -58,7 +58,7 @@
             </div>
             <br />
             <br />
-            <a href="edit_page.php?page=<?php echo urlencode($current_page['id']); ?>">Edit page</a>
+            <a href="new_sportlethen_page.php?page=<?php echo urlencode($current_page['id']); ?>">Edit page</a>
 
         <?php } else { ?>
             Please select a subject or a page.
