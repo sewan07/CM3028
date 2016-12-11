@@ -12,13 +12,15 @@
 				while($subject = mysqli_fetch_assoc($subject_set)) {
 					?>
 					<li>
-						<?php echo $subject["menu_name"]; ?>
-                      <?php $page_set =  find_all_pages_for_subject($subject["id"]); ?>
+					<a href="manage_content.php?subject=<?php echo urlencode($subject["id"]); ?>"><?php echo $subject["menu_name"]; ?> </a>
+                      <?php $page_set =  find_all_pages_for_subject($subject["id"]);?>
 						<ul class="pages">
 							<?php
 							while($page = mysqli_fetch_assoc($page_set)) {
 								?>
-								<li><?php echo $page["menu_name"]; ?></li>
+								<li>
+                                    <a href="manage_content.php?page=<?php echo urlencode($page["id"]); ?>"> <?php echo $page["menu_name"]; ?> </a>
+                                </li>
 								<?php
 							}
 							?>
