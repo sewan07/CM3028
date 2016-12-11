@@ -1,5 +1,5 @@
 <?php require_once("../includes/db_connection.php"); ?>
-<?php require_once("../includes/function_club.php"); ?>
+<?php require_once("function_club.php"); ?>
 <?php include("../includes/layouts/header.php"); ?>
 <?php find_selected_page(); ?>
 
