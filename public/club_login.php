@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {
             // Mark user as logged in
             $_SESSION["admin_id"] = $found_admin["id"];
             $_SESSION["username"] = $found_admin["username"];
-            redirect_to("choose_administrator.php");
+            redirect_to("manage_club_page.php");
         } else {
             // Failure
             $_SESSION["message"] = "Username/password not found.";
