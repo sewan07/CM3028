@@ -10,7 +10,7 @@
 if (!$current_subject) {
     // subject ID was missing or invalid or
     // subject couldn't be found in database
-    redirect_to("manage_content.php");
+    redirect_to("manage_club_page.php");
 }
 ?>
 
@@ -46,7 +46,7 @@ if (isset($_POST['submit'])) {
         if ($result) {
             // Success
             $_SESSION["message"] = "Page created.";
-            redirect_to("manage_content.php?subject=" . urlencode($current_subject["id"]));
+            redirect_to("manage_club_page.php?subject=" . urlencode($current_subject["id"]));
         } else {
             // Failure
             $_SESSION["message"] = "Page creation failed.";

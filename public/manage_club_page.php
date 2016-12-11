@@ -4,7 +4,9 @@
 <?php confirm_logged_in(); ?>
 
 
+<?php $layout_context = "admin"; ?>
 <?php include("../includes/layouts/header.php"); ?>
+<?php find_selected_page(); ?>
 
 <div id="main">
     <div id="navigation">
@@ -13,6 +15,7 @@
 
         <?php echo navigation($current_subject, $current_page); ?>
         <br />
+        <a href="new_subject.php">+ Add a subject</a>
 
     </div>
     <div id="page">
@@ -29,11 +32,11 @@
                 <h3>Pages in this subject:</h3>
                 <ul>
                     <?php
-                    $subject_pages = find_pages_for_subject($current_subject["id"]);
+                    $subject_pages = find_pages_for_subject($current_subject["id"], false);
                     while($page = mysqli_fetch_assoc($subject_pages)) {
                         echo "<li>";
                         $safe_page_id = urlencode($page["id"]);
-                        echo "<a href=\"manage_club_page.php?page={$safe_page_id}\">";
+                        echo "<a href=\"manage_content.php?page={$safe_page_id}\">";
                         echo htmlentities($page["menu_name"]);
                         echo "</a>";
                         echo "</li>";
@@ -41,7 +44,7 @@
                     ?>
                 </ul>
                 <br />
-                + <a href="new_sportlethen_page.php?subject=<?php echo urlencode($current_subject["id"]); ?>">Add a new page to this subject</a>
+                + <a href="new_page.php?subject=<?php echo urlencode($current_subject["id"]); ?>">Add a new page to this subject</a>
             </div>
 
         <?php } elseif ($current_page) { ?>
@@ -55,7 +58,7 @@
             </div>
             <br />
             <br />
-            <a href="edit_sportlethen.php?page=<?php echo urlencode($current_page['id']); ?>">Edit page</a>
+            <a href="edit_page.php?page=<?php echo urlencode($current_page['id']); ?>">Edit page</a>
 
         <?php } else { ?>
             Please select a subject or a page.
