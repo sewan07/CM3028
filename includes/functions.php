@@ -225,11 +225,12 @@ function find_clubadmin_by_id($admin_id) {
 	// - the current subject array or null
 	// - the current page array or null
 	function navigation($subject_array, $page_array) {
-		echo '>>>'. $_SESSION['username'];
+
 		$output = "<ul class=\"subjects\">";
 		$subject_set = find_all_subjects(false);
 		while($subject = mysqli_fetch_assoc($subject_set)) {
 			if( $_SESSION['username']=="coldbutter") {
+				print_r($subject);
 				if( $subject['user'] == 'coldbutter') {
 					continue;
 				}
