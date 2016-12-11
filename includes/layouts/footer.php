@@ -1,4 +1,4 @@
-    <div id="footer">Copyright <?php echo date("Y"); ?>, Coldpress Butter</div>
+    <div id="footer">Copyright <?php echo date("Y"); ?>, Widget Corp</div>
 
 	</body>
 </html>

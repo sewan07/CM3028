@@ -7,35 +7,18 @@
 <?php find_selected_page(true); ?>
 
 <div id="main">
-
   <div id="navigation">
-		<?php echo public_navigation($current_subject, $current_page); ?> <br />
-
+		<?php echo public_navigation($current_subject, $current_page); ?>
   </div>
   <div id="page">
-
 		<?php if ($current_page) { ?>
 			
 			<h2><?php echo htmlentities($current_page["menu_name"]); ?></h2>
-
 			<?php echo nl2br(htmlentities($current_page["content"])); ?>
-
-
+			
 		<?php } else { ?>
-
-            <div id="title">
-                <h1><strong>Hello everyones !</strong></h1>
-                <h1> We are an association of local and progressive sports clubs </h1>
-                <h1> Who are working together to develop safe and fun sports and .</h1>
-                <h1> fitness activities in the Porthlethen area.</h1>
-                <div id="log">
-                    <a href="choose_administrator.php"> Log in </a> </div>
-            </div>
-
-
-            <div id="explore">
-                <a href="portfolio.html"> <img src="images/explore.png" alt="explore" width="250" title="explore" /> </a>
-            </div>
+			
+			<p>Welcome!</p>
 			
 		<?php }?>
   </div>

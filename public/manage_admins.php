@@ -17,17 +17,6 @@
   <div id="page">
     <?php echo message(); ?>
     <h2>Manage Admins</h2>
-
-    <?php
-    $password = "sevenup";
-    $hash_format = "$2y$10$";
-
-    ?>
-
-
-
-
-
     <table>
       <tr>
         <th style="text-align: left; width: 200px;">Username</th>
@@ -43,11 +32,6 @@
     </table>
     <br />
     <a href="new_admin.php">Add new admin</a>
-
-<hr />
-
-
-
   </div>
 </div>
 <?php include("../includes/layouts/footer.php"); ?>

@@ -8,11 +8,10 @@
 
 <html lang="en">
 	<head>
-		<title>Go Portlethen <?php if ($layout_context == "admin") { echo "Admin"; } ?></title>
+		<title>Widget Corp <?php if ($layout_context == "admin") { echo "Admin"; } ?></title>
 		<link href="stylesheets/public.css" media="all" rel="stylesheet" type="text/css" />
-		<link href="css/bootstrap.css" media="all" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
     <div id="header">
-		<a href="index.php">  <h1>Go Portlethen <?php if ($layout_context == "admin") { echo "Admin"; } ?></h1> </a>
+      <h1>Widget Corp <?php if ($layout_context == "admin") { echo "Admin"; } ?></h1>
     </div>

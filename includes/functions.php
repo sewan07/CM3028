@@ -48,15 +48,10 @@
 		confirm_query($subject_set);
 		return $subject_set;
 	}
-
-
-
-
-
-
+	
 	function find_pages_for_subject($subject_id, $public=true) {
 		global $connection;
-
+		
 		$safe_subject_id = mysqli_real_escape_string($connection, $subject_id);
 		
 		$query  = "SELECT * ";
@@ -64,7 +59,6 @@
 		$query .= "WHERE subject_id = {$safe_subject_id} ";
 		if ($public) {
 			$query .= "AND visible = 1 ";
-
 		}
 		$query .= "ORDER BY position ASC";
 		$page_set = mysqli_query($connection, $query);
@@ -82,18 +76,7 @@
 		confirm_query($admin_set);
 		return $admin_set;
 	}
-
-function find_club_admins() {
-	global $connection;
-
-	$query  = "SELECT * ";
-	$query .= "FROM sportlethen_admins ";
-	$query .= "ORDER BY username ASC";
-	$admin_sets = mysqli_query($connection, $query);
-	confirm_query($admin_sets);
-	return $admin_sets;
-}
-
+	
 	function find_subject_by_id($subject_id, $public=true) {
 		global $connection;
 		
@@ -135,27 +118,7 @@ function find_club_admins() {
 			return null;
 		}
 	}
-
-function find_clubadmin_by_id($admin_id) {
-	global $connection;
-
-	$safe_admins_id = mysqli_real_escape_string($connection, $admin_id);
-
-	$query  = "SELECT * ";
-	$query .= "FROM sportlethen_admins ";
-	$query .= "WHERE id = {$safe_admins_id} ";
-	$query .= "LIMIT 1";
-	$admin_set = mysqli_query($connection, $query);
-	confirm_query($admin_set);
-	if($admin = mysqli_fetch_assoc($admin_set)) {
-		return $admin;
-	} else {
-		return null;
-	}
-}
-
-
-
+	
 	function find_admin_by_id($admin_id) {
 		global $connection;
 		
