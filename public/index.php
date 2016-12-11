@@ -22,9 +22,8 @@
             //var_dump($images);
 			 $images = explode(',', $images);
 
-
             foreach($images as  $image) {
-                echo '<img src="img1.jpg">';
+                echo '<img src="http://visitportlethen.azurewebsites.net/public/images/'. $image . '">';
             }
 
 			 ?>
@@ -34,7 +33,7 @@
 
 			<?php echo nl2br(htmlentities($current_page["content"])); ?>
 
-            <div id="calendar"></div>
+
 
 		<?php } else { ?>
 
