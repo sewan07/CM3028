@@ -268,8 +268,8 @@ function find_clubadmin_by_id($admin_id) {
 			if($_SESSION['username'] == "coldbutter"){
 				if( $subject_set['user'] == 'coldbutter') {
 
-					echo 'xx'
-;
+					echo 'xx';
+
 				}
 			}
 			$output .= "<li";
