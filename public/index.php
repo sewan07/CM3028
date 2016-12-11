@@ -6,6 +6,7 @@
 <?php include("../includes/layouts/header.php"); ?>
 <?php find_selected_page(true); ?>
 
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.min.js"></script>
 <div id="main">
 
   <div id="navigation">
@@ -28,6 +29,7 @@
             }
 
 			 ?>
+            <div id="calendar"></div>
 
 
 
@@ -51,5 +53,15 @@
 		<?php }?>
   </div>
 </div>
+<script type="text/javascript">
+    $(document).ready(function() {
 
+        // page is now ready, initialize the calendar...
+
+        $('#calendar').fullCalendar({
+            // put your options and callbacks here
+        })
+
+    });
+</script>
 <?php include("../includes/layouts/footer.php"); ?>
