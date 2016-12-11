@@ -17,16 +17,7 @@
 		<?php if ($current_page) { //print_r($current_page); ?>
 
 			<h2><?php echo htmlentities($current_page["menu_name"]); ?></h2>
-			<?php
-			 $images = $current_page['images'];
-            //var_dump($images);
-			 $images = explode($images);
 
-            foreach($images as  $image) {
-                echo '<img src="http://visitportlethen.azurewebsites.net/public/images/'. $image . '">';
-            }
-
-			 ?>
 
 
 
