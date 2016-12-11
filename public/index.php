@@ -24,7 +24,7 @@
 
 
 			 ?>
-<!--            <img src="/folderpath/--><?php //echo $current_page['images']
+
 
 
 			<?php echo nl2br(htmlentities($current_page["content"])); ?>
