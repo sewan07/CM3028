@@ -17,6 +17,17 @@
   <div id="page">
     <?php echo message(); ?>
     <h2>Manage Admins</h2>
+
+    <?php
+    $password = "sevenup";
+    $hash_format = "$2y$10$";
+
+    ?>
+
+
+
+
+
     <table>
       <tr>
         <th style="text-align: left; width: 200px;">Username</th>
