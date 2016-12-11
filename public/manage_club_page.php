@@ -3,7 +3,7 @@
 <?php require_once("../includes/function_club.php"); ?>
 <?php confirm_logged_in(); ?>
 
-<?php $layout_context = "admin"; ?>
+
 <?php include("../includes/layouts/header.php"); ?>
 
 <div id="main">
