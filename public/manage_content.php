@@ -41,7 +41,7 @@
 		</div>
 		<div id="page">
 			<h2>Manage Content</h2>
-            <?php $link_name = "admin page";?>
+            <?php $link_name = "test page";?>
             <a href="admin.php"><?php echo $link_name; ?> </a>
 
 		</div>
