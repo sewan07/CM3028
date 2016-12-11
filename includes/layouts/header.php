@@ -16,3 +16,6 @@
     <div id="header">
 		<a href="index.php">  <h1>Go Portlethen <?php if ($layout_context == "admin") { echo "Admin"; } ?></h1> </a>
     </div>
+<div id="log">
+	LOG IN
+</div>
