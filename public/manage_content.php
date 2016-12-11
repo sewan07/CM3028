@@ -6,12 +6,7 @@
 		<div id="navigation">
 			<ul class="subjects">
 				<?php
-				$query  = "SELECT * ";
-				$query .= "FROM subjects ";
-				$query .= "WHERE visible = 1 ";
-				$query .= "ORDER BY position ASC";
-				$subject_set = mysqli_query($connection, $query);
-				confirm_query($subject_set);
+
 				?>
 				<?php
 				while($subject = mysqli_fetch_assoc($subject_set)) {
@@ -46,6 +41,8 @@
 		</div>
 		<div id="page">
 			<h2>Manage Content</h2>
+            <?php $link_name = "admin page";?>
+            <a href="admin.php"><?php echo $link_name; ?> </a>
 
 		</div>
 	</div>
