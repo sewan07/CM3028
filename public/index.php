@@ -28,9 +28,6 @@
                 <h1> We are an association of local and progressive sports clubs </h1>
                 <h1> Who are working together to develop safe and fun sports and .</h1>
                 <h1> fitness activities in the Porthlethen area.</h1>
-                <div id="log">
-                    <a href="choose_administrator.php"> Log in </a> </div>
-            </div>
 
 
             <div id="explore">
