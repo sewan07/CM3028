@@ -12,7 +12,7 @@ function find_all_subjects() {
     $query  = "SELECT * ";
     $query .= "FROM subjects ";
     // $query .= "WHERE visible = 1 ";
-    $query .= "AND id = 2 ";
+    $query .= "WHERE id = 2 ";
     $query .= "ORDER BY position ASC";
     $subject_set = mysqli_query($connection, $query);
     confirm_query($subject_set);
