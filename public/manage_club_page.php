@@ -16,7 +16,34 @@ if (isset($_GET["subject"])) {
 ?>
     <div id="main">
         <div id="navigation">
-          <?php echo navigation($selected_subject_id, $selected_page_id); ?>
+            <ul class="subjects">
+                <?php
+                $subject_set = find_all_subjects() ?>
+                ?>
+                <?php
+                while($subject = mysqli_fetch_assoc($subject_set)) {
+                    ?>
+                    <li>
+                        <a href="manage_club_page.php?subject=<?php echo urlencode($subject["id"]); ?>"><?php echo $subject["menu_name"]; ?> </a>
+                        <?php $page_set =  find_all_pages_for_subject($subject["id"]);?>
+                        <ul class="pages">
+                            <?php
+                            while($page = mysqli_fetch_assoc($page_set)) {
+                                ?>
+                                <li>
+                                    <a href="manage_club_page.php?page=<?php echo urlencode($page["id"]); ?>"> <?php echo $page["menu_name"]; ?> </a>
+                                </li>
+                                <?php
+                            }
+                            ?>
+                            <?php mysqli_free_result($page_set); ?>
+                        </ul>
+                    </li>
+                    <?php
+                }
+                ?>
+                <?php mysqli_free_result($subject_set); ?>
+            </ul>
         </div>
         <div id="page">
             <h2>Manage Content</h2>
