@@ -98,7 +98,7 @@ function navigation($subject_array, $page_array) {
             $output .= " class=\"selected\"";
         }
         $output .= ">";
-        $output .= "<a href=\"manage_content.php?subject=";
+        $output .= "<a href=\"manage_club_page.php?subject=";
         $output .= urlencode($subject["id"]);
         $output .= "\">";
         $output .= $subject["menu_name"];
@@ -112,7 +112,7 @@ function navigation($subject_array, $page_array) {
                 $output .= " class=\"selected\"";
             }
             $output .= ">";
-            $output .= "<a href=\"manage_content.php?page=";
+            $output .= "<a href=\"manage_club_page.php?page=";
             $output .= urlencode($page["id"]);
             $output .= "\">";
             $output .= $page["menu_name"];
