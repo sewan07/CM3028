@@ -1,5 +1,7 @@
+
 <?php require_once("../includes/session.php"); ?>
-<?php require_once("../includes/functions.php"); ?>
+
+<?php require_once("../includes/function_club.php"); ?>
 
 
 <?php $layout_context = "admin"; ?>
