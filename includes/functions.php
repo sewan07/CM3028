@@ -266,6 +266,7 @@ function find_clubadmin_by_id($admin_id) {
 		$subject_set = find_all_subjects();
 		while($subject = mysqli_fetch_assoc($subject_set)) {
 			if($_SESSION['username'] == "coldbutter"){
+				echo 'ttt';
 				if( $subject_set['user'] == 'coldbutter') {
 
 					echo 'xx';
