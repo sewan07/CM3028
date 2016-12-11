@@ -1,5 +1,4 @@
-<div id="log">
-    <a href="choose_administrator.php"> Log in </a> </div>
+
 <?php include("../includes/layouts/header.php"); ?>
 
     <div id="main">
