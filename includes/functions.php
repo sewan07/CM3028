@@ -262,18 +262,9 @@ function find_clubadmin_by_id($admin_id) {
 	}
 
 	function public_navigation($subject_array, $page_array) {
-		echo '>>>' . $_SESSION['username'];
 		$output = "<ul class=\"subjects\">";
 		$subject_set = find_all_subjects();
 		while($subject = mysqli_fetch_assoc($subject_set)) {
-			if($_SESSION['username'] == "coldbutter"){
-				echo 'ttt';
-				if( $subject_set['user'] == 'coldbutter') {
-
-					echo 'xx';
-
-				}
-			}
 			$output .= "<li";
 			if ($subject_array && $subject["id"] == $subject_array["id"]) {
 				$output .= " class=\"selected\"";
