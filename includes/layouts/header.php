@@ -17,5 +17,5 @@
 		<a href="index.php">  <h1>Go Portlethen <?php if ($layout_context == "admin") { echo "Admin"; } ?></h1> </a>
     </div>
 <div id="log">
-	   <a href = "choose_administrator">LOG IN </a>
+	   <a href = "choose_administrator.php">LOG IN </a>
 </div>
