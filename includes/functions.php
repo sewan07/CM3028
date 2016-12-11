@@ -265,6 +265,11 @@ function find_clubadmin_by_id($admin_id) {
 		$output = "<ul class=\"subjects\">";
 		$subject_set = find_all_subjects();
 		while($subject = mysqli_fetch_assoc($subject_set)) {
+			if($_SESSION['username'] == "coldbutter"){
+				if( $subject_set['user'] == 'coldbutter') {
+					continue;
+				}
+			}
 			$output .= "<li";
 			if ($subject_array && $subject["id"] == $subject_array["id"]) {
 				$output .= " class=\"selected\"";
