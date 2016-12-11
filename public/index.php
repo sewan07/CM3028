@@ -19,6 +19,7 @@
 			<h2><?php echo htmlentities($current_page["menu_name"]); ?></h2>
 			<?php
 			 $images = $current_page['images'];
+            var_dump($images);
 			 $images = explode(',', $images);
 			 print_r($images);
 
