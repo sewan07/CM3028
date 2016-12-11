@@ -13,7 +13,7 @@
         <h2>Club Admin Menu</h2>
         <p>Welcome to the club admin area, <?php echo htmlentities($_SESSION["username"]); ?>.</p>
         <ul>
-            <li><a href="manage_club_page.php">Sportlethen Sports</a></li>
+            <li><a href="club_admin/manage_club_page.php">Sportlethen Sports</a></li>
             <li><a href="huntly.php">Huntly Sports Hub</a></li>
             <li><a href="logout.php">Logout</a></li>
         </ul>
