@@ -26,7 +26,7 @@ function find_pages_for_subject($subject_id) {
 
     $query  = "SELECT * ";
     $query .= "FROM pages ";
-    $query .= "WHERE id = 2 ";
+    $query .= "WHERE id = 1 ";
     $query .= "AND subject_id = {$safe_subject_id} ";
     $query .= "ORDER BY position ASC";
     $page_set = mysqli_query($connection, $query);
