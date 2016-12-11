@@ -14,15 +14,18 @@
   </div>
   <div id="page">
 
-		<?php if ($current_page) { print_r($current_page); ?>
-			
+		<?php if ($current_page) { //print_r($current_page); ?>
+
 			<h2><?php echo htmlentities($current_page["menu_name"]); ?></h2>
 			<?php
 			 $images = $current_page['images'];
-            var_dump($images);
+            //var_dump($images);
 			 $images = explode(',', $images);
 			 print_r($images);
 
+            foreach($images as  $image) {
+                echo '<img src="images/'. $image . '">';
+            }
 
 			 ?>
 
