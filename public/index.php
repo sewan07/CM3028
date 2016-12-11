@@ -20,7 +20,7 @@
 			<?php
 			 $images = $current_page['images'];
             //var_dump($images);
-			 $images = explode(',', $images);
+			 $images = explode($images);
 
             foreach($images as  $image) {
                 echo '<img src="http://visitportlethen.azurewebsites.net/public/images/'. $image . '">';
