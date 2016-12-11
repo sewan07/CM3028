@@ -13,6 +13,8 @@
 
   </div>
   <div id="page">
+      <div id="log">
+          <a href="choose_administrator.php"> Log in </a> </div>
 		<?php if ($current_page) { ?>
 			
 			<h2><?php echo htmlentities($current_page["menu_name"]); ?></h2>
