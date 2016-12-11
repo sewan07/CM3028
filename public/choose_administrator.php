@@ -10,7 +10,7 @@
             <p>Welcome to admin area</p>
             <ul>
                 <li><a href="admin.php">Site Administrator</a></li>
-                <li><a href="club_login.php">Club Administrator</a></li>
+                <li><a href="manage_club_page.php">Club Administrator</a></li>
                 <li><a href="contributer.php">Contributer</a></li>
                 <li><a href="NKPAG.php">NKPAG</a></li>
 
