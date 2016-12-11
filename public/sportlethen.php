@@ -34,7 +34,7 @@
                         <?php
                         while($page = mysqli_fetch_assoc($page_set)) {
                             ?>
-                   <a href="manage_content.php"> <li><?php echo $page["menu_name"]; ?></li> </a>
+                   <a href="manage_club_page.php"> <li><?php echo $page["menu_name"]; ?></li> </a>
                             <?php
                         }
                         ?>
@@ -49,7 +49,7 @@
     </div>
     <div id="page">
         <h2>Manage Content</h2>
-        <a href="editclub_page.php?page=<?php echo urlencode($current_page['id']); ?>">Edit page</a>
+        <a href="manage_club_page.php?page=<?php echo urlencode($current_page['id']); ?>">Edit page</a>
     </div>
 </div>
 
