@@ -2,7 +2,7 @@
 <?php require_once("../includes/functions.php"); ?>
 
 
-<?php $layout_context = "admin"; ?>
+
 <?php include("../includes/layouts/header.php"); ?>
 
     <div id="main">
