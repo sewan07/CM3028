@@ -36,7 +36,7 @@
                     while($page = mysqli_fetch_assoc($subject_pages)) {
                         echo "<li>";
                         $safe_page_id = urlencode($page["id"]);
-                        echo "<a href=\"manage_content.php?page={$safe_page_id}\">";
+                        echo "<a href=\"manage_club_page.php?page={$safe_page_id}\">";
                         echo htmlentities($page["menu_name"]);
                         echo "</a>";
                         echo "</li>";
