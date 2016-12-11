@@ -1,8 +1,4 @@
-<?php require_once("../includes/session.php"); ?>
-<?php require_once("../includes/functions.php"); ?>
 
-
-<?php $layout_context = "admin"; ?>
 <?php include("../includes/layouts/header.php"); ?>
 
 <div id="main">
@@ -11,7 +7,7 @@
     </div>
     <div id="page">
         <h2>Choose administration type</h2>
-        <p>Welcome to admin area,</p>
+        <p>Welcome to admin area, </p>
         <ul>
             <li><a href="admin.php">Site Administrator</a></li>
             <li><a href="club_admin.php">Club Administrator</a></li>
