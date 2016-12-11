@@ -28,13 +28,13 @@
             }
 
 			 ?>
-            <div id="calendar"></div>
+
 
 
 
 			<?php echo nl2br(htmlentities($current_page["content"])); ?>
 
-
+            <div id="calendar"></div>
 
 		<?php } else { ?>
 
