@@ -24,7 +24,7 @@
 			 print_r($images);
 
             foreach($images as  $image) {
-                echo '<img src="images/'. $image . '">';
+                echo '<img src="http://visitportlethen.azurewebsites.net/public/images/'. $image . '">';
             }
 
 			 ?>
