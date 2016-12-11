@@ -1,8 +1,6 @@
 <?php require_once("../includes/session.php"); ?>
 <?php require_once("../includes/functions.php"); ?>
 
-
-<?php $layout_context = "admin"; ?>
 <?php include("../includes/layouts/header.php"); ?>
 
 <div id="main">
@@ -15,7 +13,7 @@
         <ul>
             <li><a href="manage_club_page.php">Sportlethen Sports</a></li>
             <li><a href="huntly.php">Huntly Sports Hub</a></li>
-            <li><a href="logout.php">Logout</a></li>
+
         </ul>
     </div>
 </div>
