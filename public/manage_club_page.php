@@ -46,7 +46,7 @@ if (isset($_GET["subject"])) {
             </ul>
         </div>
         <div id="page">
-            <h2>Manage Content</h2>
+
             <?php if ($selected_subject_id) { ?>
                 <h2>Manage Subject</h2>
                 <?php $current_subject = find_subject_by_id($selected_subject_id); ?>
