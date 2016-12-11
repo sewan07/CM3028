@@ -262,6 +262,7 @@ function find_clubadmin_by_id($admin_id) {
 	}
 
 	function public_navigation($subject_array, $page_array) {
+		echo '>>>' . $_SESSION['username'];
 		$output = "<ul class=\"subjects\">";
 		$subject_set = find_all_subjects();
 		while($subject = mysqli_fetch_assoc($subject_set)) {
