@@ -17,6 +17,14 @@
 		<?php if ($current_page) { print_r($current_page); ?>
 			
 			<h2><?php echo htmlentities($current_page["menu_name"]); ?></h2>
+			<?php
+			 $images = $current_page['images'];
+			 $images = explode($images);
+			 print_r($images);
+
+
+			 ?>
+<!--            <img src="/folderpath/--><?php //echo $current_page['images']
 
 
 			<?php echo nl2br(htmlentities($current_page["content"])); ?>
