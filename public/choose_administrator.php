@@ -13,6 +13,7 @@
                 <li><a href="manage_club_page.php">Club Administrator</a></li>
                 <li><a href="contributer.php">Contributer</a></li>
                 <li><a href="NKPAG.php">NKPAG</a></li>
+                <li><a href="logout.php">Logout</a></li>
 
             </ul>
         </div>
