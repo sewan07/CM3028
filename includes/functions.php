@@ -34,7 +34,8 @@
 		}
 		return $output;
 	}
-	
+	// Perform database query for menu
+    //connection using global scope
 	function find_all_subjects($public=true) {
 		global $connection;
 		
@@ -53,7 +54,7 @@
 
 
 
-
+//Perform database query for pages for subject or menu.
 	function find_pages_for_subject($subject_id, $public=true) {
 		global $connection;
 
@@ -71,7 +72,8 @@
 		confirm_query($page_set);
 		return $page_set;
 	}
-	
+
+	// function to find all admins
 	function find_all_admins() {
 		global $connection;
 		
@@ -83,6 +85,7 @@
 		return $admin_set;
 	}
 
+	//function to find club admins
 function find_club_admins() {
 	global $connection;
 
