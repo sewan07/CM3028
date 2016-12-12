@@ -1,7 +1,8 @@
 <?php
-
+//passing data into session
+//start the session
 session_start();
-
+//retrieve the value and display it
 function message() {
     if (isset($_SESSION["message"])) {
         $output = "<div class=\"message\">";

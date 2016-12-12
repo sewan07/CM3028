@@ -43,6 +43,7 @@
 				?>
 				</ul>
 				<br />
+				<!-- adding a link for the newsubject.php-->
 				+ <a href="new_page.php?subject=<?php echo urlencode($current_subject["id"]); ?>">Add a new page to this subject</a>
 			</div>
 
@@ -57,9 +58,11 @@
 			</div>
 			<br />
       <br />
+			<!-- adding a link for the edit_page.php with subject id-->
       <a href="edit_page.php?page=<?php echo urlencode($current_page['id']); ?>">Edit page</a>
 			
 		<?php } else { ?>
+			<!-- Display this page in the page section (if the user did not select any page or subject this page will display in the main section-->
 			Please select a subject or a page.
 		<?php }?>
   </div>

@@ -5,6 +5,7 @@
 
 <?php $layout_context = "admin"; ?>
 <?php include("../includes/layouts/header.php"); ?>
+<!-- find the navigation-->
 <?php find_selected_page(); ?>
 
 <div id="main">
@@ -24,7 +25,9 @@
 		  <p>Position:
 		    <select name="position">
 				<?php
+				//return all of the subjects
 					$subject_set = find_all_subjects(false);
+				//setting the subject value
 					$subject_count = mysqli_num_rows($subject_set);
 					for($count=1; $count <= ($subject_count + 1); $count++) {
 						echo "<option value=\"{$count}\">{$count}</option>";

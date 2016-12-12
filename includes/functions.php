@@ -1,5 +1,5 @@
 <?php
-
+//redirect page
 	function redirect_to($new_location) {
 	  header("Location: " . $new_location);
 	  exit;
@@ -36,6 +36,8 @@
 	}
 	// Perform database query for menu
     //connection using global scope
+    //perform the query on the connection
+    //confirm the query in the subject set
 	function find_all_subjects($public=true) {
 		global $connection;
 		
@@ -46,15 +48,14 @@
 		}
 		$query .= "ORDER BY position ASC";
 		$subject_set = mysqli_query($connection, $query);
+        //calling a function confirm_query
 		confirm_query($subject_set);
 		return $subject_set;
 	}
 
 
-
-
-
-//Perform database query for pages for subject or menu.
+//Perform database query for pages for subject or menu by passing safe_subject_id.
+//
 	function find_pages_for_subject($subject_id, $public=true) {
 		global $connection;
 
@@ -96,10 +97,12 @@ function find_club_admins() {
 	confirm_query($admin_sets);
 	return $admin_sets;
 }
-
+//creating a function for dinf the subject by id
+// getting the subject id from the url request
 	function find_subject_by_id($subject_id, $public=true) {
+
 		global $connection;
-		
+		//creating safe subject id variable
 		$safe_subject_id = mysqli_real_escape_string($connection, $subject_id);
 		
 		$query  = "SELECT * ";
@@ -108,12 +111,14 @@ function find_club_admins() {
 		if ($public) {
 			$query .= "AND visible = 1 ";
 		}
+		//return one thing
 		$query .= "LIMIT 1";
 		$subject_set = mysqli_query($connection, $query);
 		confirm_query($subject_set);
 		if($subject = mysqli_fetch_assoc($subject_set)) {
 			return $subject;
 		} else {
+		    //return nothing if it does not find
 			return null;
 		}
 	}
@@ -203,22 +208,26 @@ function find_clubadmin_by_id($admin_id) {
 			return null;
 		}
 	}
-	
+	//figuring out what page is set
+
 	function find_selected_page($public=false) {
 		global $current_subject;
 		global $current_page;
-		
+		//if subject is set
+        //set the variable subject id
 		if (isset($_GET["subject"])) {
 			$current_subject = find_subject_by_id($_GET["subject"], $public);
 			if ($current_subject && $public) {
 				$current_page = find_default_page_for_subject($current_subject["id"]);
 			} else {
+
 				$current_page = null;
 			}
 		} elseif (isset($_GET["page"])) {
 			$current_subject = null;
 			$current_page = find_page_by_id($_GET["page"], $public);
 		} else {
+		    //selecting default value
 			$current_subject = null;
 			$current_page = null;
 		}
@@ -239,12 +248,15 @@ function find_clubadmin_by_id($admin_id) {
 				}
 
 			}
-			$output .= "<li";
+			$output .= "<ul";
+            // when the subject id and the selected id are equal mark it as equal and highlight the selected id
 			if ($subject_array && $subject["id"] == $subject_array["id"]) {
 				$output .= " class=\"selected\"";
 			}
 			$output .= ">";
+            //reload the same page and pass the subject id
 			$output .= "<a href=\"manage_content.php?subject=";
+            //echo subject id
 			$output .= urlencode($subject["id"]);
 			$output .= "\">";
 			$output .= htmlentities($subject["menu_name"]);
@@ -258,7 +270,9 @@ function find_clubadmin_by_id($admin_id) {
 					$output .= " class=\"selected\"";
 				}
 				$output .= ">";
+                //reload the same page and pass the pass id
 				$output .= "<a href=\"manage_content.php?page=";
+                //echo page id
 				$output .= urlencode($page["id"]);
 				$output .= "\">";
 				$output .= htmlentities($page["menu_name"]);
