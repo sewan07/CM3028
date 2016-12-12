@@ -248,7 +248,7 @@ function find_clubadmin_by_id($admin_id) {
 				}
 
 			}
-			$output .= "<ul";
+			$output .= "<li";
             // when the subject id and the selected id are equal mark it as equal and highlight the selected id
 			if ($subject_array && $subject["id"] == $subject_array["id"]) {
 				$output .= " class=\"selected\"";
